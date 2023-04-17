@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" th:replace="base::Layout(~{::section})">
+<head>
+  <meta charset="UTF-8">
+  <title >login</title>
+</head>
+<body>
+<section >
+  <div id="login">
+    <div class="container">
+      <div id="login-row" class="row justify-content-center align-items-center">
+        <div id="login-column" class="col-md-6" >
+          <div id="login-box" class="col-md-12"style="height:200px;" >
+            <div class="alert alert-success" role="alert">
+              we have sent OTP to your email..
+            </div>
+            <form th:action="@{/send_otp}" method="post">
+
+              <div class="form-group mb-3 p-4">
+                <input name="Otp" required type="text" placeholder="Enter OTP Here" class="form-control">
+              </div>
+              <div class="container text-center">
+
+                <button class="btn btn-success">Verify Otp</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
